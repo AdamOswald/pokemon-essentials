@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-    - cron: '31 20 * * 2'
+    - cron: '44 16 * * 4'
 
 jobs:
   analyze:
@@ -45,6 +45,7 @@ jobs:
         include:
         - language: actions
           build-mode: none
+          
         - language: ruby
           build-mode: none
         # CodeQL supports the following values keywords for 'language': 'actions', 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift'

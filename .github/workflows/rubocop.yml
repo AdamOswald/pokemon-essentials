@@ -16,7 +16,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
   schedule:
-    - cron: '17 20 * * 3'
+    - cron: '38 3 * * 4'
 
 jobs:
   rubocop:

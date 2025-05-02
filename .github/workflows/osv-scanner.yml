@@ -17,7 +17,7 @@ on:
   merge_group:
     branches: [ "master" ]
   schedule:
-    - cron: '34 2 * * 2'
+    - cron: '40 9 * * 5'
   push:
     branches: [ "master" ]
 
