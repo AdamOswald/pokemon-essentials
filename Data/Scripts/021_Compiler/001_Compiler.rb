@@ -79,7 +79,7 @@ module Compiler
   def csvQuote(str, always = false)
     return "" if nil_or_empty?(str)
     if always || str[/[,\"]/]   # || str[/^\s/] || str[/\s$/] || str[/^#/]
-      str = str.gsub(/\"/, "\\\"")
+      str = str.gsub(/\\/, "\\\\\\").gsub(/\"/, "\\\"")
       str = "\"#{str}\""
     end
     return str
