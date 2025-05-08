@@ -7,14 +7,11 @@ name: pmd
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "alt-dev" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "alt-dev" ]
   schedule:
     - cron: '21 18 * * 2'
-
-permissions:
-  contents: read
 
 jobs:
   pmd-code-scan:
