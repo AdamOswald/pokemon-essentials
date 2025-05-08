@@ -5,6 +5,8 @@
 
 # pulled from repo
 name: "Rubocop"
+permissions:
+ security-events: write
 
 on:
   push:
