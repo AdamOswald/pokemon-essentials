@@ -602,7 +602,7 @@ module Compiler
           field = csvfield!(rec)
           if nil_or_empty?(field)
             subrecord.push(nil)
-          elsif field[/^1|[Tt][Rr][Uu][Ee]|[Yy][Ee][Ss]|[Tt]|[Yy]$/]
+          elsif field[/\A(1|[Tt][Rr][Uu][Ee]|[Yy][Ee][Ss]|[Tt]|[Yy])\z/]
             subrecord.push(true)
           else
             subrecord.push(false)
