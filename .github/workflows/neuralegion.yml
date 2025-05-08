@@ -151,9 +151,9 @@ name: "NeuraLegion"
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "alt-dev" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "alt-dev" ]
   schedule:
     - cron: '43 19 * * 3'
 
