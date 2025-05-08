@@ -512,7 +512,17 @@ module Compiler
   # Convert a string to values using a schema
   #=============================================================================
   # Unused
-  # @deprecated This method is slated to be removed in v22.
+  ##
+  # Parses a CSV record string according to a schema, converting each field to the appropriate type.
+  #
+  # Supports required and optional fields, repeated subrecords, and various data types including integers, floats, booleans, names, symbols, enumerables, and unformatted text. Raises errors with detailed file and line information if fields are invalid or missing.
+  #
+  # @deprecated This method is slated to be removed in v22. Use {#get_csv_record} instead.
+  # @param rec [String] The CSV record string to parse.
+  # @param lineno [Integer] The line number of the record, used for error reporting.
+  # @param schema [Array] The schema definition array specifying field types and options.
+  # @return [Object] An array of parsed values, or a single value if the schema specifies only one non-repeating field.
+  # @raise [RuntimeError] If a field does not match the expected type or format according to the schema.
   def pbGetCsvRecord(rec, lineno, schema)
     Deprecation.warn_method("pbGetCsvRecord", "v22", "get_csv_record")
     record = []
